@@ -28,6 +28,10 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/note", noteRouter);
 app.use("/api/v1/enc", encryptedRouter);
 
+app.get("/", (req, res) => {
+  res.json({ message: "Successfull" });
+});
+
 app.use(errorHandler);
 
 export default app;
